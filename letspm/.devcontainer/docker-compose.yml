@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  app:
+    container_name: javadev
+    platform: linux/amd64
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: test
+      MYSQL_PASSWORD: test
+    
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+    volumes:
+      - ../../:/workspace:cached
+
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    network_mode: service:db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - 3306:3306 # HOST:CONTAINER
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_HOST: localhost
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: test
+      MYSQL_PASSWORD: test
+      TZ: Asia/Seoul
+
+    volumes:
+      - ../../db/conf.d:/etc/mysql/conf.d
+      - ../../db/data:/var/lib/mysql
+      - ../../db/initdb.d:/docker-entrypoint-initdb.d
