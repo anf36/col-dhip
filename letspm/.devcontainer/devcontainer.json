@@ -18,14 +18,17 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-                "Debugger for Java",
-				"Extension Pack for Java",
-				"Maven for Java",
-				"Project Manager for Java",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-gradle",
+				"redhat.java",
+				"vscjava.vscode-maven",
+				"vscjava.vscode-java-dependency",
 				"vmware.vscode-spring-boot",
 				"vscjava.vscode-spring-initializr",
-				"Test Runner for Java",
-            ]
+				"vscjava.vscode-java-test",
+				"jakebathman.mysql-syntax"
+			]
 		}
 	}
 
