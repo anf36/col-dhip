@@ -27,8 +27,19 @@
 				"vmware.vscode-spring-boot",
 				"vscjava.vscode-spring-initializr",
 				"vscjava.vscode-java-test",
-				"jakebathman.mysql-syntax"
-			]
+				"jakebathman.mysql-syntax",
+				"vscjava.vscode-lombok"
+			],
+			"settings": {
+				"spring-boot.ls.java.home": "/opt/java/openjdk",
+				"java.configuration.runtimes": [
+					{
+					  "name": "JavaSE-11",
+					  "path": "/opt/java/openjdk",
+					  "default": true
+					}
+				  ]
+			}
 		}
 	}
 
