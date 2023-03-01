@@ -6,7 +6,7 @@
 	"dockerComposeFile": ["./docker-compose.yml"],
 	"shutdownAction": "none",
 	"service": "app",
-	"workspaceFolder": "/workspace/letspm",
+	"workspaceFolder": "/workspace",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [3306],

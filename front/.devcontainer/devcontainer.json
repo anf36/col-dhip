@@ -26,11 +26,12 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-                "Vetur",
-				"Vue 3 Snippets",
-				"Vue VSCode Snippets",
-				"Material Icon Theme"
-            ]
+				"hollowtree.vue-snippets",
+				"Vue.volar",
+				"PKief.material-icon-theme",
+				"sdras.vue-vscode-snippets",
+				"octref.vetur"
+			]
 		}
 	}
 
